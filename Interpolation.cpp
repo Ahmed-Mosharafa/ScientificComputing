@@ -104,21 +104,21 @@ void printArray(double a[], int n){
 	cout << "\n";
 }
 int main(){
-    double newton_test[]   = {1,4,6,5,3,1.5,2.5,3.5};
-    double newton_values[] = {0.0,1.3862944,1.7917595,1.6094379,1.0986123,0.4054641,0.9162907,1.2527630};
-    double spline_test[]   = {1,2,3,4,5};
-	double spline_values[] = {0.75,0,-1,3,4.75};
-    double newton_point    = 2;
-	double spline_point    = 1.2;	
+    double newton_test[]   = {1,4,6,5,3,1.5,2.5}; //3.5
+    double newton_values[] = {0.0,1.3862944,1.7917595,1.6094379,1.0986123,0.4054641,0.9162907}; //1.2527630
+    double spline_test[]   = {3,4.5,7};
+	double spline_values[] = {2.5,1,2.5};
+    double newton_point    = 3.5;
+	double spline_point    = 5;	
 	Interpolation interpolate ;  
 	cout << "Test Data of Newton Interpolation\n"; 
-	printArray(newton_test, 8);
-	printArray(newton_values, 8);
-	cout << "Newton Interpolation of point " << newton_point << " is: " << interpolate.NewtInt(newton_test, newton_values, newton_point ,8) << "\n\n";
+	printArray(newton_test, 7);
+	printArray(newton_values, 7);
+	cout << "Newton Interpolation of point " << newton_point << " is: " << interpolate.NewtInt(newton_test, newton_values, newton_point ,7) << "\n\n";
 	cout << "Test Data of Cubic Spline\n"; 
-	printArray(spline_test, 5);
-	printArray(spline_values, 5);
-	cout << "\nSpline Interpolation of point " << spline_point << " is: " << interpolate.Spline(spline_test, spline_values, spline_point ,5);
+	printArray(spline_test, 3);
+	printArray(spline_values, 3);
+	cout << "\nSpline Interpolation of point " << spline_point << " is: " << interpolate.Spline(spline_test, spline_values, spline_point ,3);
 	return 0;
 }
 
